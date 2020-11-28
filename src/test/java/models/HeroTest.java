@@ -2,6 +2,8 @@ package models;
 
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class HeroTest {
@@ -28,5 +30,10 @@ public class HeroTest {
     Hero squadHero = new Hero("Wakanda",36,"Vibranium", "Nerdy");
     Squad.add(squadHero);
     assertTrue(Squad.whoIsTheHeroInSquad(squadHero));
+}
+@Test
+    public void addHeroTest(){
+List team = Hero.addHero();
+assertEquals(6, team.size());
 }
 }
