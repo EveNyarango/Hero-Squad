@@ -1,3 +1,4 @@
+import models.Hero;
 import models.Squad;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
@@ -24,7 +25,12 @@ public static void main (String[] args){
         return new ModelAndView(model, "success.hbs");
     }, new HandlebarsTemplateEngine());
 
-
+//    route for adding hero
+get("/hero",(request,response) ->{
+    Map<String, Object> model = new HashMap<>();
+    model.put("addHeroes", Hero.addHero());
+    return new ModelAndView(model, "hero.hbs");
+},new HandlebarsTemplateEngine());
 
 
 }
