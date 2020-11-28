@@ -1,3 +1,17 @@
-{{#partial}}
+{{#partial "content"}}
+<div class="jumbotron">
+   {{#each addHeroes}}
+       <h4>NAME: {{name}}</h4>
+       <hr>
+       <p>AGE: {{age}}</p>
+       <hr>
+       <p>Special Power: {{power}}</p>
+       <hr>
+       <p>Weakness: {{weakness}}</p>
+
+       {{/each}}
+</div>
 
  {{/partial}}
+
+{{>layout.hbs}}
