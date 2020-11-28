@@ -11,13 +11,19 @@
         <div class="card-title">
 <h3>Squad name: {{name}}</h3>
         </div>
+        <div class="card-body">
+          <p>Cause: {{cause}}</p>
+            <p>Members: {{size}}</p>
+        </div>
     </div>
          {{/each}}
     </div>
     {{/if}}
        <br>
         <br>
-        <a><button type="button" class="btn btn-info" href="/squadform">Check Squad</button></a>
+        <a><button type="button" class="btn btn-info" href="/squadForm">Create Squad</button></a>
 
     </div>
     {{/partial}}
+
+{{>layout.hbs}}
