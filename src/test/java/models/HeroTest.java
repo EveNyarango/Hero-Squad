@@ -12,9 +12,11 @@ public class HeroTest {
     assertTrue(true);
 }
 @Test
-    public void checkSquad(){
+    public void checkHeroSquad(){
     Squad squad = new Squad(5, "", "");
-    Hero hero = new Hero();
+    Hero hero = new Hero("Wonder Woman", 25, "Supernatural Strength", "She falls in love");
+    squad.add(hero);
+    assertEquals(2, Squad.getMembers().size());
 }
 
 }
