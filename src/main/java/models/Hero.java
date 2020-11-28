@@ -11,7 +11,7 @@ private String weaknesses;
     private static List<Hero> hInstances = new ArrayList<>();
 private int size;
 
-    public Hero(String name, int age, String power, String weaknesses, int size) {
+    public Hero(String name, int age, String power, String weaknesses) {
         this.name = name;
         this.age = age;
         this.power = power;

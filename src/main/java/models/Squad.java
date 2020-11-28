@@ -31,9 +31,9 @@ private int plusSize;
         return cause;
     }
 
-//    public int getPlusSize() {
-//        return plusSize;
-//    }
+    public int getPlusSize() {
+        return plusSize;
+    }
 
     public static List<Object> getMembers() {
         return members;
