@@ -1,0 +1,23 @@
+{{#partial "content"}}
+    <div class="row">
+    <div>
+        <h3>Holla! Here is your squad! </h3>
+    </div>
+    {{#if "Squad"}}
+
+    <div class="col-md-6">
+     {{#each "squad"}}
+    <div class="card">
+        <div class="card-title">
+<h3>Squad name: {{name}}</h3>
+        </div>
+    </div>
+         {{/each}}
+    </div>
+    {{/if}}
+       <br>
+        <br>
+        <a><button type="button" class="btn btn-info" href="/squadform">Check Squad</button></a>
+
+    </div>
+    {{/partial}}
