@@ -41,10 +41,10 @@ private int size;
     }
 
     public static List<Hero> addHero() {
-        Hero hero = new Hero("Aquaman", 40, "Ability to communicate with creatures", "kryptonite");
+        Hero aqua = new Hero("Aquaman", 40, "Ability to communicate with creatures", "kryptonite");
         Hero iron = new Hero("Ironman", 44, "Supersonic flight Energy", "Ego-Centric");
         Hero king = new Hero("Wakanda",36,"Vibranium", "Nerdy");
-        hInstances.add(hero);
+        hInstances.add(aqua);
         hInstances.add(iron);
         hInstances.add(king);
         return hInstances;
