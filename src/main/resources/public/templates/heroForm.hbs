@@ -1,0 +1,32 @@
+{{#partial "title"}}
+    Hello! Let's create a Squad!
+{{/partial}}
+
+
+
+{{#partial "content"}}
+    <body style="background-image: url('images/squad1.jpg'); background-size:cover; background-repeat:no-repeat;">
+    <form action="/addHero1"   method="post">
+        <div class="form-group">
+            <label for="name">Name of the hero:{{name}}</label>
+            <input id="name" name="name" class="form-control" type="text" required>
+        </div>
+        <div class="form-group">
+            <label for="name">Age of the hero: {{age}}</label>
+            <input id="age" name="age" class="form-control" type="number" required>
+        </div>
+        <div class="form-group">
+            <label for="cause">Power of the hero: {{power}}</label>
+            <input id="power" name="power" class="form-control" type="text" required>
+        </div>
+        <div class="form-group">
+            <label for="cause">Weakness of the hero: {{weakness}}</label>
+            <input id="weakness" name="weakness" class="form-control" type="text" required>
+        </div>
+        <button type="button" class="btn btn-success">Submit</button>
+        <a class="btn btn-info" href="/hero">Check Hero</a>
+    </form>
+    </body>
+{{/partial}}
+
+{{> layout.hbs}}

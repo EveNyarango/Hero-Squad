@@ -21,16 +21,33 @@ public static void main (String[] args){
     port(port);
 
     //get: index route for home page
-    get("/", (req, res) -> {
+    get("/", (request, response) -> {
         Map<String, Object> model = new HashMap<>();
         return new ModelAndView(model, "index.hbs");
     }, new HandlebarsTemplateEngine());
 
 //        route for adding hero
-//    get("/...",(request,response) ->{
+//
+//    post("/addHero1", (request, response) ->{
+//
 //        Map<String, Object> model = new HashMap<>();
-//        model.put("addHeroes", Hero.addHero());
-//        return new ModelAndView(model, "hero.hbs");
+//        String name = request.queryParams("name");
+//        int age = Integer.parseInt(request.queryParams("age"));
+//        String power = request.queryParams("power");
+//        String weakness = request.queryParams("weakness");
+//
+//        Hero hero = new Hero(name, age, power, weakness);
+//
+//        model.put("hero", hero);
+//        return new ModelAndView(model, "successForm.hbs");
+//    }, new HandlebarsTemplateEngine());
+//
+//
+//
+//    get("/heroForm",(request,response) ->{
+//        Map<String, Object> model = new HashMap<>();
+//        model.put("addHeroes", Hero.addHero()); //add it to model for template to display
+//        return new ModelAndView(model, "heroForm.hbs");
 //    },new HandlebarsTemplateEngine());
 
     //route to form to create squad
@@ -41,21 +58,22 @@ public static void main (String[] args){
 
 //    route for creating squad
     post("/success", (request, response) ->{
+
+        Map<String, Object> model = new HashMap<>();
         String name = request.queryParams("name");
         int size = Integer.parseInt(request.queryParams("size"));
         String cause = request.queryParams("cause");
 
         Squad squad = new Squad(size, name, cause);
 
-        Map<String, Object> model = new HashMap<>();
         model.put("squad", squad);
         return new ModelAndView(model, "success.hbs");
     }, new HandlebarsTemplateEngine());
 
-
+//retreives data from above for new squad
     get("/newSquad", (request, response) -> {
         Map<String, Object> model = new HashMap<>();
-        model.put("squad", Squad.getMembers());
+        model.put("squad", Squad.getMembers()); //displays squad created
         return new ModelAndView(model, "newSquad.hbs");
     }, new HandlebarsTemplateEngine());
 
