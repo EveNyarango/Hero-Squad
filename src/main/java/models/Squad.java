@@ -43,6 +43,7 @@ private int plusSize;
     }
 
     public static boolean whoIsTheHeroInSquad(Hero hero){
+
         return members.contains(hero);
     }
 

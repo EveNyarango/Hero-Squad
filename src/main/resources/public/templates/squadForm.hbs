@@ -5,18 +5,18 @@ Hello! Let's create a Squad!
 
 
 {{#partial "content"}}
-<body>
+<body style="background-image: url('images/squad1.jpg'); background-size:cover; background-repeat:no-repeat;">
     <form action="/success"   method="post">
         <div class="form-group">
-            <label for="size">Enter the size of the squad</label>
+            <label for="size">Size of the squad</label>
             <input id="size" name="size" class="form-control" type="number" required>
         </div>
         <div class="form-group">
-            <label for="name">Enter the name of the squad</label>
+            <label for="name">Name of the squad</label>
             <input id="name" name="name" class="form-control" type="text" required>
         </div>
         <div class="form-group">
-            <label for="cause">Enter the cause of the squad</label>
+            <label for="cause">Cause of the squad</label>
             <input id="cause" name="cause" class="form-control" type="text" required>
         </div>
         <button type="button" class="btn btn-success">Submit</button>
