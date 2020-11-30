@@ -1,0 +1,13 @@
+html,
+body,
+header,
+label{
+color:white;
+}
+
+html,
+body,
+header,
+input{
+background-color:none;
+}

@@ -5,7 +5,7 @@
 
 
 {{#partial "content"}}
-    <body style="background-image: url('images/squad1.jpg'); background-size:cover; background-repeat:no-repeat;">
+    <body style="background-image: url('images/hero3.jpg'); background-size:cover; background-repeat:no-repeat;">
     <form action="/addHero1"   method="post">
         <div class="form-group">
             <label for="name">Name of the hero:{{name}}</label>
@@ -23,7 +23,7 @@
             <label for="cause">Weakness of the hero: {{weakness}}</label>
             <input id="weakness" name="weakness" class="form-control" type="text" required>
         </div>
-        <button type="button" class="btn btn-success">Submit</button>
+        <a class="btn btn-success" href="/successForm">Submit</a>
         <a class="btn btn-info" href="/hero">Check Hero</a>
     </form>
     </body>

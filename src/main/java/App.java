@@ -11,14 +11,14 @@ public class App {
 public static void main (String[] args){
     staticFileLocation("/public");
 
-    ProcessBuilder process = new ProcessBuilder();
-    Integer port;
-    if (process.environment().get("PORT") != null) {
-        port = Integer.parseInt(process.environment().get("PORT"));
-    } else {
-        port = 4567;
-    }
-    port(port);
+//    ProcessBuilder process = new ProcessBuilder();
+//    Integer port;
+//    if (process.environment().get("PORT") != null) {
+//        port = Integer.parseInt(process.environment().get("PORT"));
+//    } else {
+//        port = 4567;
+//    }
+//    port(port);
 
     //get: index route for home page
     get("/", (request, response) -> {
@@ -27,28 +27,28 @@ public static void main (String[] args){
     }, new HandlebarsTemplateEngine());
 
 //        route for adding hero
-//
-//    post("/addHero1", (request, response) ->{
-//
-//        Map<String, Object> model = new HashMap<>();
-//        String name = request.queryParams("name");
-//        int age = Integer.parseInt(request.queryParams("age"));
-//        String power = request.queryParams("power");
-//        String weakness = request.queryParams("weakness");
-//
-//        Hero hero = new Hero(name, age, power, weakness);
-//
-//        model.put("hero", hero);
-//        return new ModelAndView(model, "successForm.hbs");
-//    }, new HandlebarsTemplateEngine());
-//
-//
-//
-//    get("/heroForm",(request,response) ->{
-//        Map<String, Object> model = new HashMap<>();
-//        model.put("addHeroes", Hero.addHero()); //add it to model for template to display
-//        return new ModelAndView(model, "heroForm.hbs");
-//    },new HandlebarsTemplateEngine());
+
+    post("/addHero1", (request, response) ->{
+
+        Map<String, Object> model = new HashMap<>();
+        String name = request.queryParams("name");
+        int age = Integer.parseInt(request.queryParams("age"));
+        String power = request.queryParams("power");
+        String weakness = request.queryParams("weakness");
+
+        Hero hero = new Hero(name, age, power, weakness);
+
+        model.put("hero", hero);
+        return new ModelAndView(model, "successForm.hbs");
+    }, new HandlebarsTemplateEngine());
+
+
+
+    get("/heroForm",(request,response) ->{
+        Map<String, Object> model = new HashMap<>();
+        model.put("addHeroes", Hero.addHero()); //add it to model for template to display
+        return new ModelAndView(model, "heroForm.hbs");
+    },new HandlebarsTemplateEngine());
 
     //route to form to create squad
     get("/squadForm", (request, response) -> {
@@ -67,7 +67,7 @@ public static void main (String[] args){
         Squad squad = new Squad(size, name, cause);
 
         model.put("squad", squad);
-        return new ModelAndView(model, "success.hbs");
+        return new ModelAndView(model, "successSquad.hbs");
     }, new HandlebarsTemplateEngine());
 
 //retreives data from above for new squad
