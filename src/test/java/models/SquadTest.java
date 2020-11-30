@@ -13,4 +13,10 @@ public class SquadTest {
         assertTrue(Squad.getMembers().contains(squad));
     }
 
+    @Test
+    public void squadFunction() {
+        Squad squad = new Squad(8, "Rando", "Machine learning");
+        assertTrue(Squad.getMembers().contains(squad));
+    }
+
 }

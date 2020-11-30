@@ -54,12 +54,6 @@ public static void main (String[] args) {
         return new ModelAndView(model, "hero.hbs");
     }, new HandlebarsTemplateEngine());
 
-//    2nd retrieve
-//    get("/successForm", (request, response) -> {
-//        Map<String, Object> model = new HashMap<>();
-//        model.put("addHeroes", Hero.addHero()); //displays hero
-//        return new ModelAndView(model, "hero.hbs");
-//    }, new HandlebarsTemplateEngine());
 
 
     //route to form to create squad
