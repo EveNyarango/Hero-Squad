@@ -27,6 +27,13 @@ public static void main (String[] args){
     }, new HandlebarsTemplateEngine());
 
 //        route for adding hero
+    get("/heroForm",(request,response) ->{
+        Map<String, Object> model = new HashMap<>();
+//        model.put("addHero1", Hero.addHero()); //add it to model for template to display
+        return new ModelAndView(model, "heroForm.hbs");
+    },new HandlebarsTemplateEngine());
+
+
 
     post("/addHero1", (request, response) ->{
 
@@ -42,13 +49,6 @@ public static void main (String[] args){
         return new ModelAndView(model, "successForm.hbs");
     }, new HandlebarsTemplateEngine());
 
-
-
-    get("/heroForm",(request,response) ->{
-        Map<String, Object> model = new HashMap<>();
-        model.put("addHeroes", Hero.addHero()); //add it to model for template to display
-        return new ModelAndView(model, "heroForm.hbs");
-    },new HandlebarsTemplateEngine());
 
     //route to form to create squad
     get("/squadForm", (request, response) -> {
