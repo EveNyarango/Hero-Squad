@@ -8,7 +8,7 @@ import java.util.Map;
 
 import static spark.Spark.*;
 public class App {
-public static void main (String[] args){
+public static void main (String[] args) {
     staticFileLocation("/public");
 
 //    ProcessBuilder process = new ProcessBuilder();
@@ -27,15 +27,13 @@ public static void main (String[] args){
     }, new HandlebarsTemplateEngine());
 
 //        route for adding hero
-    get("/heroForm",(request,response) ->{
+    get("/heroForm", (request, response) -> {
         Map<String, Object> model = new HashMap<>();
-//        model.put("addHero1", Hero.addHero()); //add it to model for template to display
         return new ModelAndView(model, "heroForm.hbs");
-    },new HandlebarsTemplateEngine());
+    }, new HandlebarsTemplateEngine());
 
 
-
-    post("/addHero1", (request, response) ->{
+    post("/addHero1", (request, response) -> {
 
         Map<String, Object> model = new HashMap<>();
         String name = request.queryParams("name");
@@ -46,8 +44,22 @@ public static void main (String[] args){
         Hero hero = new Hero(name, age, power, weakness);
 
         model.put("hero", hero);
-        return new ModelAndView(model, "successForm.hbs");
+        return new ModelAndView(model, "successHero.hbs");
     }, new HandlebarsTemplateEngine());
+
+//retreives data from above for new hero
+    get("/hero", (request, response) -> {
+        Map<String, Object> model = new HashMap<>();
+        model.put("addHeroes", Hero.getAll()); //displays hero
+        return new ModelAndView(model, "hero.hbs");
+    }, new HandlebarsTemplateEngine());
+
+//    2nd retrieve
+//    get("/successForm", (request, response) -> {
+//        Map<String, Object> model = new HashMap<>();
+//        model.put("addHeroes", Hero.addHero()); //displays hero
+//        return new ModelAndView(model, "hero.hbs");
+//    }, new HandlebarsTemplateEngine());
 
 
     //route to form to create squad
@@ -57,7 +69,7 @@ public static void main (String[] args){
     }, new HandlebarsTemplateEngine());
 
 //    route for creating squad
-    post("/success", (request, response) ->{
+    post("/success", (request, response) -> {
 
         Map<String, Object> model = new HashMap<>();
         String name = request.queryParams("name");
@@ -79,5 +91,4 @@ public static void main (String[] args){
 
 
 }
-
 }

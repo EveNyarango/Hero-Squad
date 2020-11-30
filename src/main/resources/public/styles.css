@@ -5,9 +5,7 @@ label{
 color:white;
 }
 
-html,
-body,
-header,
-input{
+.form-control{
 background-color:none;
+opacity:0.8;
 }

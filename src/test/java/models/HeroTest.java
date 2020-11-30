@@ -20,5 +20,9 @@ public class HeroTest {
     assertTrue(Hero.getAll().contains(king));
 }
 
-
+//    @Test
+//    public void addHeroTest(){
+//        List heroList = Hero.addHero();
+//        assertEquals(6, heroList.size());
+//    }
 }

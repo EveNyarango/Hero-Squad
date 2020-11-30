@@ -11,28 +11,32 @@ private String weaknesses;
     private static List<Hero> hInstances = new ArrayList<>();
 private int size;
 
-    public Hero(String name, int age, String power, String weaknesses) {
+    public Hero(String name, int age, String power, String weaknesses)  {
         this.name = name;
         this.age = age;
         this.power = power;
         this.weaknesses = weaknesses;
         hInstances.add(this);
-        size = hInstances.size();
+//        size = hInstances.size();
     }
 
     public String getName() {
+
         return name;
     }
 
     public int getAge() {
+
         return age;
     }
 
     public String getPower() {
+
         return power;
     }
 
     public String getWeaknesses() {
+
         return weaknesses;
     }
 
