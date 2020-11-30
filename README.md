@@ -36,9 +36,9 @@ Enter power of the hero
 Enter weakness of the hero
 
 ## Demo
-![screenhero3](https://user-images.githubusercontent.com/70526252/100666944-f252e180-336a-11eb-97d4-f38cef8729dd.png)
-![screenhero2](https://user-images.githubusercontent.com/70526252/100667024-14e4fa80-336b-11eb-91cc-4f8413420136.png)
-![screenhero](https://user-images.githubusercontent.com/70526252/100667072-19111800-336b-11eb-9dee-499d565e5cc6.png)
+![screenheros](https://user-images.githubusercontent.com/70526252/100667989-490ceb00-336c-11eb-9420-d05f7c650830.png)
+![screenheros2](https://user-images.githubusercontent.com/70526252/100668064-63df5f80-336c-11eb-9b58-5b23bd0a1f85.png)
+![screenheros3](https://user-images.githubusercontent.com/70526252/100668072-6772e680-336c-11eb-8e13-45ff50561df5.png)
 
 ## Link
 https://github.com/EveNyarango/Hero-Squad
