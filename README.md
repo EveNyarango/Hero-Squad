@@ -4,7 +4,7 @@
 Eve Nyarang'o  
 
 ## Description
-Its an application that gives the user to create a squad and also add a hero to the squad.
+Its an application that gives the user a chance to create a squad and also add a hero to the squad.
 
 ## Installation
 Install sdk
