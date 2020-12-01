@@ -29,12 +29,16 @@ Enter name of the squad
 Enter cause of the squad
 
 **Add hero to the squad**
+
 Enter name the hero
 Enter age of the hero
 Enter power of the hero
 Enter weakness of the hero
 
 ## Demo
+![screenheros](https://user-images.githubusercontent.com/70526252/100667989-490ceb00-336c-11eb-9420-d05f7c650830.png)
+![screenheros2](https://user-images.githubusercontent.com/70526252/100668064-63df5f80-336c-11eb-9b58-5b23bd0a1f85.png)
+![screenheros3](https://user-images.githubusercontent.com/70526252/100668072-6772e680-336c-11eb-8e13-45ff50561df5.png)
 
 ## Link
 https://github.com/EveNyarango/Hero-Squad
