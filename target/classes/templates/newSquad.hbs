@@ -1,0 +1,26 @@
+{{#partial "content"}}
+    <body>
+
+        <div>
+            <h3>Holla! Here is your squad! </h3>
+        </div>
+        {{#if "squad"}}
+            <div class="col-md-6">
+                {{#each squad}}
+                    <div class="card"  style="background-image: url('images/hero2.jpg'); background-size:cover; background-repeat:no-repeat;">
+                        <h3>Squad name: {{name}}</h3>
+                        <hr>
+                        <p>Cause: {{cause}}</p>
+                        <hr>
+                        <p>Members: {{size}}</p>
+                    </div>
+                {{/each}}
+            </div>
+        {{/if}}
+
+        <br>
+        <a class="btn btn-info" href="/squadForm">Add Squad</a>
+    </body>
+{{/partial}}
+
+{{> layout.hbs}}

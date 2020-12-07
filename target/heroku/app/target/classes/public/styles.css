@@ -1,0 +1,11 @@
+html,
+body,
+header,
+label{
+color:white;
+}
+
+.form-control{
+background-color:none;
+opacity:0.8;
+}
